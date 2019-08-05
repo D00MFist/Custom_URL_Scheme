@@ -1,0 +1,6 @@
+ObjC.import('Foundation')
+ObjC.import('stdlib')
+var app = Application.currentApplication();
+app.includeStandardAdditions = true;
+var payload = "ps"
+var commandOutput = app.doShellScript(payload)
